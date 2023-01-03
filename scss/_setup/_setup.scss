@@ -1,0 +1,32 @@
+$margin: 10px;
+$max-w: 1600px;
+$max-w-sm: 900px;
+
+$breaks : (
+  'sm' : $small,
+  'md' : $medium,
+  'lg': $large,
+  'tab': $tablet,
+  'xl': $small-screen
+);
+
+$colors: (
+  c-white: #fff,
+  c-black: #0b0b0b,
+  c-dark : #49545a,
+  c-lightblue: #eef7fa,
+  c-blue: #04a5e3,
+  blue-bigstone: #0f1e29,
+  petrol: #004666,
+  petrol-80: #335f7d,
+  petrol-60: #67879d,
+  petrol-l: #ddecf1,
+  petrol-l-30: #ddecf1,
+  c-grey: #4c5356,
+  grey-2: #0e2b3a,
+  c-silver: #a8adb3,
+  silver-30: #e5e6e8,
+  silver-50: #d3d6d9,
+  anthracite:#34393b,
+  radial-black: radial-gradient(63.75% 77.26% at 85.49% 3.19%, #004666 24.48%, #000 100%),
+);

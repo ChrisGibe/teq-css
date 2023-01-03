@@ -1,10 +1,10 @@
 {
   "name": "tequila-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom CSS library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config ./bundler/webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ChrisGibe/teq-css/issues"
   },
-  "homepage": "https://github.com/ChrisGibe/teq-css#readme"
+  "homepage": "https://github.com/ChrisGibe/teq-css#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
 }

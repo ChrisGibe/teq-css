@@ -1,0 +1,19 @@
+@mixin gap-breakpoints($k) {
+  @each $key,$val  in $breaks {
+    @include teq-breakpoint($val) {
+      .gap-#{$key}-#{$k} {
+        gap: #{$k}px;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  @include gap-breakpoints($i);
+}
