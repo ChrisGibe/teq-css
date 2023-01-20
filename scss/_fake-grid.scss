@@ -22,7 +22,7 @@
   >div {
     background-color: rgba(122, 55, 156, 0.1);
     height: 100%;
-    padding: 0 #{$gutter / 2};
+    padding: 0 #{calc($gutter / 2)};
     width: calc(100% / 3);
 
 

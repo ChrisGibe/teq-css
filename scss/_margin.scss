@@ -5,59 +5,6 @@ $margins : (
   'right': 'r',
 );
 
-
-// ALL THE MIXIN START
-@mixin margin-breakpoints($words, $abbr, $i) {
-  @each $key,$val in $breaks {
-    @include teq-breakpoint($val) {
-      .m#{$abbr}-#{$key}-#{$i}, div[class^=col-].m#{$abbr}-#{$key}-#{$i} {
-        margin-#{$words}: calc(#{$margin} * #{$i});
-      }
-    }
-  }
-}
-
-@mixin mx-0-breakpoints() {
-  @each $key,$val  in $breaks {
-    @include teq-breakpoint($val) {
-      .mx-#{$key}-0 {
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-@mixin my-0-breakpoints() {
-  @each $key,$val  in $breaks {
-    @include teq-breakpoint($val) {
-      .my-#{$key}-0 {
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-    }
-  }
-}
-// ALL THE MIXIN END
-
-
-@each $words, $abbr in $margins {
-  @for $i from 1 through 24 {
-    .m#{$abbr}-#{$i}, div[class^=col-].m#{$abbr}-#{$i} {
-      margin-#{$words}: calc(#{$margin} * #{$i});
-    }
-  }
-}
-
-@each $words, $abbr in $margins {
-  @for $i from 0 through 24 {
-    @include margin-breakpoints($words, $abbr, $i);
-  }
-}
-
-@include mx-0-breakpoints();
-@include my-0-breakpoints();
-
 .mx-0 {
   margin-left: 0;
   margin-right: 0;
@@ -83,3 +30,20 @@ $margins : (
 .mr-0 {
   margin-right: 0;
 }
+
+@each $words, $abbr in $margins {
+  @for $i from 1 through 24 {
+    .m#{$abbr}-#{$i}, div[class^=col-].m#{$abbr}-#{$i} {
+      margin-#{$words}: calc(#{$margin} * #{$i});
+    }
+  }
+}
+
+@each $words, $abbr in $margins {
+  @for $i from 0 through 24 {
+    @include margin-breakpoints($words, $abbr, $i);
+  }
+}
+
+@include mx-0-breakpoints();
+@include my-0-breakpoints();

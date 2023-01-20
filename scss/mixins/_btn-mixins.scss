@@ -1,5 +1,5 @@
-@use '../_setup/btn-setup' as btn_;
-@use './transitions' as transition-mixin_;
+@use '../_setup/_my-setup' as btn_;
+@use './transitions-mixins' as transition-mixin_;
 
 @mixin btn-hover-and-active($btn-type) {
   &:hover,
@@ -19,7 +19,6 @@
 
   @include btn-hover-and-active($btn-type);
 }
-
 
 
 @mixin btn($btn-type) {
