@@ -3,7 +3,7 @@ import { toggleGrid } from "./_toggleGrid.js"
 /**
  * Create a grid
  */
-export function createGrid() {
+export default function createGrid() {
     const nbColumns = 12
     const body = document.querySelector('body')
 
